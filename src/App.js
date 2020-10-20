@@ -1,29 +1,20 @@
-import React, { useState } from 'react';
+import * as ReactHabitat from 'react-habitat';
+import Component from './Component.js';
 
-function Counter(props) {
-  const [count, setCount] = useState(0)
+class Main extends ReactHabitat.Bootstrapper {
+  constructor() {
+    super();
 
-  return (
-    <div>
-      <h1>Counter {props.number}</h1>
-      <p>{count}</p>
-      <button onClick={ () => setCount(count + 1) }>+</button>
-      <button onClick={ () => setCount(count - 1) }>-</button>
-    </div>
-  );
-}
+    // Create a new container builder:
+    const builder = new ReactHabitat.ContainerBuilder();
 
-export default function App() {
-  const [counterNumber, setCounterNumber] = useState(1)
-  const counters = [];
-  for (var i = 1; i <= counterNumber; i++) {
-    counters.push(<Counter key={i} number={i} />)
+    // Register a component:
+    builder.register(Component).as('Component');
+
+    // Finally, set the container:
+    this.setContainer(builder.build());
+
   }
-  return (
-    <div>
-      {counters}
-      <button onClick={ () => setCounterNumber(counterNumber + 1)}>Add Counter</button>
-      <button onClick={ () => setCounterNumber(counterNumber - 1)}>Delete Counter</button>
-    </div>
-  );
 }
+
+export default new Main()

@@ -9,7 +9,7 @@ module.exports = {
 
   //Where to start the code bundle
   entry: {
-    main: './src/index.js'
+    main: './src/App.js'
   },
 
   //Show what directory to serve from
