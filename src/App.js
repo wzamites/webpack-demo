@@ -12,7 +12,7 @@ function Counter(props) {
   )
 }
 
-export default function App() {
+export function App() {
   const [counterNumber, setCounterNumber] = useState(1)
   const counters = [];
   for (var i = 1; i <= counterNumber; i++) {
