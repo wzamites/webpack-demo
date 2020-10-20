@@ -8,7 +8,9 @@ module.exports = {
   mode: 'development',
 
   //Where to start the code bundle
-  entry: './src/index.js',
+  entry: {
+    main: './src/index.js'
+  },
 
   //Show what directory to serve from
   devServer: {
