@@ -4,7 +4,7 @@ module.exports = {
   //Gives console errors pointing to source files intead of bundles
   devtool: 'inline-source-map',
 
-  //No idea what this does tbh
+  //Development does the source mapping and production comments it out
   mode: 'development',
 
   //Where to start the code bundle
