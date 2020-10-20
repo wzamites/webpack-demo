@@ -23,19 +23,14 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
 
-  //for React
+  //for React and typescript
   module: {
     rules: [
       {
-        test: /\.m?js$/,
+        test: /\.js(x?)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+        loader: 'babel-loader'
       }
     ]
-  }
+  },
 };
