@@ -1,5 +1,5 @@
 # Webpack-demo
-Webpack demo with React Habitat and *live* reloading (not hot reloading yet)
+Webpack demo with React Habitat and hot reloading.
 
     $ git clone https://github.com/wzamites/webpack-demo.git
     $ cd webpack-demo
