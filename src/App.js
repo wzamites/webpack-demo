@@ -19,7 +19,7 @@ class Main extends ReactHabitat.Bootstrapper {
 
 export default new Main()
 
-document.getElementById('root').innerHTML = 'Edit me and keep your state';
+document.getElementById('root').innerHTML = '<h1>Edit me and keep your state</h1>';
 
 if (module.hot) {
   module.hot.accept()
