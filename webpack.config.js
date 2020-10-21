@@ -14,7 +14,8 @@ module.exports = {
 
   //Show what directory to serve from
   devServer: {
-  contentBase: './dist',
+    contentBase: './dist',
+    hot: true
   },
 
   //name and path of the resulting bundle

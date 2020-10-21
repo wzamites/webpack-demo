@@ -1,5 +1,5 @@
 import * as ReactHabitat from 'react-habitat';
-import SkipLink from './components/SkipLink/SkipLink';
+import Component from './components/Component';
 
 class Main extends ReactHabitat.Bootstrapper {
   constructor() {
@@ -9,7 +9,7 @@ class Main extends ReactHabitat.Bootstrapper {
     const builder = new ReactHabitat.ContainerBuilder();
 
     // Register a component:
-    builder.register(SkipLink).as('SkipLink');
+    builder.register(Component).as('Component');
 
     // Finally, set the container:
     this.setContainer(builder.build());
