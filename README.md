@@ -5,4 +5,4 @@ Webpack demo with React Habitat and hot reloading.
     $ cd webpack-demo
     $ npm i
     $ npm start
-   Open local http://localhost:8080/ to see the counter example
+   Open http://localhost:8080/ to see the counter example
