@@ -1,5 +1,5 @@
 import * as ReactHabitat from 'react-habitat';
-import Component from './components/Component';
+import Component from './Component';
 
 class Main extends ReactHabitat.Bootstrapper {
   constructor() {
@@ -19,7 +19,7 @@ class Main extends ReactHabitat.Bootstrapper {
 
 export default new Main()
 
-document.getElementById('root').innerHTML = '<h1>Edit me and keep your state</h1>';
+document.getElementById('root').innerHTML = "<h1>Edit me and keep your state.</h1>"
 
 if (module.hot) {
   module.hot.accept()
