@@ -4,7 +4,6 @@ const webpack = require('webpack');
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
-
 module.exports = {
   //Gives console errors pointing to source files intead of bundles
   devtool: 'inline-source-map',
@@ -29,7 +28,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
 
-  //for React and typescript
   module: {
     rules: [
       {
@@ -41,13 +39,10 @@ module.exports = {
         test: /\.[jt]sx?$/,
         exclude: /node_modules/,
         use: [
-          // ... other loaders
           {
             loader: require.resolve('babel-loader'),
             options: {
-              // ... other options
               plugins: [
-                // ... other plugins
                 isDevelopment && require.resolve('react-refresh/babel'),
               ].filter(Boolean),
             }
@@ -56,8 +51,8 @@ module.exports = {
       }
     ]
   },
+
   plugins: [
-    // ... other plugins
     isDevelopment && new webpack.HotModuleReplacementPlugin(),
     isDevelopment && new ReactRefreshWebpackPlugin(),
   ].filter(Boolean)
